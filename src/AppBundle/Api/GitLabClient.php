@@ -19,7 +19,7 @@ class GitLabClient
     public function __construct(Client $client)
     {
         $this->client = $client->create('http://git.exozet.com')
-            ->authenticate('DqMyxiDf7dznHWyZhMvG', $client::AUTH_URL_TOKEN);
+            ->authenticate('put here your gittlab token password', $client::AUTH_URL_TOKEN);
     }
 
     /**
