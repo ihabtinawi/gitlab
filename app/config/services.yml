@@ -29,6 +29,20 @@ services:
         public: true
         tags: ['controller.service_arguments']
         autowire: true
+
+    AppBundle\Api\GitLabClient:
+        public: true
+        arguments:
+            $client: '@gitlab.client'
+
+    gitlab.client:
+        class: Gitlab\Client
+
+    AppBundle\Services\GitLabCommitsService:
+        public: true
+        autowire: true
+
+
   # add more services, or override services that need manual wiring
     # AppBundle\Service\ExampleService:
     #     arguments:
